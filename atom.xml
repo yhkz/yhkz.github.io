@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-12-20T07:54:00.117Z</updated>
+  <updated>2024-12-21T02:44:18.634Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学习心得</title>
+    <link href="http://example.com/2024/12/19/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97%E4%B8%80/"/>
+    <id>http://example.com/2024/12/19/%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97%E4%B8%80/</id>
+    <published>2024-12-19T07:27:00.000Z</published>
+    <updated>2024-12-21T02:44:18.634Z</updated>
+    
+    <content type="html"><![CDATA[<p>因为要测试一个程序，需要调用浏览器操作，因此需要桌面版的linux，之前一直没有桌面版的，家里老笔记本以前装了deepin，试了一下发现不行，（可能也是我技术不行），于是用虚拟机重新安装了一个桌面版的Debian12，在运行程序时还是遇到一些问题，写篇文章记录一下。<br>刚装好debian后用户不能执行sudo，提示用户不在sudoers，这种情况需要重新启动计算机并进入GRUB菜单，使用方向键选择Advanced options for Debian并按Enter键。在接下来的菜单中，选择包含recovery mode的项（可能标记为(recovery mode)），然后按Enter键，在shell窗口中如下操作:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo visudo</span><br><span class="line"></span><br><span class="line">user ALL=(ALL:ALL) ALL # 添加用户名user到 sudoers 文件</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>运行程序报错</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">error: externally-managed-environment</span><br><span class="line">× This environment is externally managed</span><br><span class="line">╰─&gt; To install Python packages system-wide, try brew install</span><br><span class="line">xyz, where xyz is the package you are trying to</span><br><span class="line">install.</span><br><span class="line"></span><br><span class="line">If you wish to install a non-brew-packaged Python package,</span><br><span class="line">create a virtual environment using python3 -m venv path/to/venv.</span><br><span class="line">Then use path/to/venv/bin/python and path/to/venv/bin/pip.</span><br><span class="line"></span><br><span class="line">If you wish to install a non-brew packaged Python application,</span><br><span class="line">it may be easiest to use pipx install xyz, which will manage a</span><br><span class="line">virtual environment for you. Make sure you have pipx installed.</span><br><span class="line"></span><br><span class="line">note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.</span><br><span class="line">hint: See PEP 668 for the detailed specification.</span><br></pre></td></tr></table></figure><p>解决办法</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">1. 创建虚拟环境</span><br><span class="line">python3 -m venv /path/to/venv  #\path/to/是自己的路径</span><br><span class="line"></span><br><span class="line">2. 激活虚拟环境</span><br><span class="line"></span><br><span class="line">source /Users/wangyang/PycharmProjects/venv/bin/activate</span><br><span class="line"></span><br><span class="line">3.在虚拟环境中安装</span><br><span class="line">pip install  xxxx</span><br><span class="line">或者直接运行程序，比如./xxx</span><br><span class="line"></span><br><span class="line">4. 退出虚拟环境</span><br><span class="line">deactivate</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;因为要测试一个程序，需要调用浏览器操作，因此需要桌面版的linux，之前一直没有桌面版的，家里老笔记本以前装了deepin，试了一下发现不行，（可能也是我技术不行），于是用虚拟机重新安装了一个桌面版的Debian12，在运行程序时还是遇到一些问题，写篇文章记录一下。&lt;br&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="linux" scheme="http://example.com/tags/linux/"/>
+    
+    <category term="debian" scheme="http://example.com/tags/debian/"/>
+    
+  </entry>
   
   <entry>
     <title>五雷山之行</title>
